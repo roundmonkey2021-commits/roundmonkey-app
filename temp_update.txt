@@ -1,0 +1,13 @@
+Updating the P&L chart section to add "Trades" filter and use the new PnLPerTradeChart component.
+
+Changes needed:
+1. Update state: const [profitPerTradeTimeFrame, setProfitPerTradeTimeFrame] = useState<'trades' | 'days' | 'weeks' | 'months'>('days');
+2. Add "Trades" button before "Days" button  
+3. Update title logic to handle 'trades' case
+4. Replace inline chart code with <PnLPerTradeChart> component
+
+The title should read:
+- 'trades': 'P&L Per Trade'
+- 'days': 'P&L Per Day'
+- 'weeks': 'P&L Per Week'
+- 'months': 'P&L Per Month'
